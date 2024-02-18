@@ -1,4 +1,6 @@
-# Using React with Redux Toolkit: Todo App and Auth App Examples
+<img src="https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif" />
+
+# Using React with Redux Toolkit
 
 In modern web development, combining React with Redux Toolkit has become a popular choice for managing state in complex applications efficiently. Redux Toolkit provides a simplified way to work with Redux by abstracting away much of the boilerplate code traditionally associated with it. Below, we'll explore two examples - a Todo App and an Auth App - to demonstrate how React and Redux Toolkit can be used together effectively.
 
@@ -44,7 +46,3 @@ The Auth App focuses on user authentication and authorization. It demonstrates h
 ### Implementation Details
 
 The Auth App utilizes Redux Toolkit to manage authentication state, including actions for user login, logout, and registration. JWT tokens are used for secure authentication, and protected routes are implemented using React Router alongside Redux Toolkit to manage access control.
-
-## Conclusion
-
-By combining React with Redux Toolkit, developers can create powerful web applications with efficient state management and reduced boilerplate code. The Todo App and Auth App examples showcase how these technologies can be leveraged to build feature-rich applications with clean, maintainable code. Whether managing todo lists or implementing user authentication, React and Redux Toolkit provide a robust foundation for modern web development.
