@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, removeTodo } from "../features/todo/todoSlice";
 
 function TodoApp() {
-  const [todos, setTodos] = useState([]);
+  //   const [todos, setTodos] = useState([]);
+
+  const todos = useSelector((state) => state.todos);
   const [inputValue, setInputValue] = useState("");
+  const dispatch = useDispatch();
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -10,15 +15,13 @@ function TodoApp() {
 
   const handleAddTodo = () => {
     if (inputValue.trim() !== "") {
-      setTodos([...todos, inputValue]);
+      dispatch(addTodo(inputValue));
       setInputValue("");
     }
   };
 
   const handleRemoveTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+    dispatch(removeTodo(index));
   };
 
   return (
@@ -34,10 +37,10 @@ function TodoApp() {
         <button onClick={handleAddTodo}>Add Todo</button>
       </div>
       <ul className="todo-list">
-        {todos.map((todo, index) => (
-          <li key={index} className="todo-item">
-            {todo}
-            <button onClick={() => handleRemoveTodo(index)}>Remove</button>
+        {todos.map((todo) => (
+          <li key={todo.id} className="todo-item">
+            {todo.text}
+            <button onClick={() => handleRemoveTodo(todo.id)}>Remove</button>
           </li>
         ))}
       </ul>
