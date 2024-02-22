@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  return <>Auth App</>;
+  return <>Authentication App</>;
 }
 
 export default App;
