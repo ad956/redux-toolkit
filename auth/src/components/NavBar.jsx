@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <nav>
       {isLoggedIn ? (
-        <p>Welcome!</p>
+        <p>Demonstatring Authentication using react-redux toolkit !!!</p>
       ) : (
         <button onClick={() => dispatch(login())}>Login</button>
       )}
