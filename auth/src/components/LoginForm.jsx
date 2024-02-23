@@ -30,3 +30,5 @@ function LoginForm() {
     </form>
   );
 }
+
+export default LoginForm;
