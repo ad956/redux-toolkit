@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTodo, removeTodo } from "../features/todo/todoSlice";
 
 function TodoApp() {
-  //   const [todos, setTodos] = useState([]);
-
-  const todos = useSelector((state) => state.todos);
+  // const todos = useSelector((state) => state.todos); // initially wihtout combineReducers
+  const todos = useSelector((state) => state.todo.todos); // write the reducer name as well.
   const [inputValue, setInputValue] = useState("");
   const dispatch = useDispatch();
 
